@@ -15,13 +15,13 @@
 <body>
     <nav class="navbar navbar-expand-md navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand" href="#">Coding Expert Detector</a>
+            <a class="navbar-brand" href="/">Coding Expert Detector</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
                     <a class="nav-link" href="#">About</a>
                 </div>
             </div>
@@ -51,8 +51,10 @@
 
         <div id="editor" class="mb-3"></div>
 
-        <button type="button" id="testCodeBtn" class="btn btn-secondary">Run Tests</button>
-        <button type="button" id="submitBtn" class="btn btn-primary">Submit</button>
+        <form id="codeForm" action="/result" method="post">
+            <input type="hidden" name="code" id="code">
+            <button type="submit" id="submitBtn" class="btn btn-primary">Submit</button>
+        </form>
     </div>
 
     <style>
@@ -101,13 +103,8 @@
             reader.readAsText(event.target.files[0]);
         });
 
-        $('#testCodeBtn').click(function() {
-            console.log(codeMirror.getDoc().getValue());
-            // send to page on server to trigger api call
-            // server modify to complete code, and somehow suppress user print
-            // server do basic checks (method name, etc)
-            // server issue api call to jdoodle, maybe rate limit it as well
-            // server return result
+        $('#codeForm').submit(function() {
+            $('#code').val(codeMirror.getDoc().getValue());
         });
     </script>
 </body>
