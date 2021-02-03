@@ -1,13 +1,21 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, session
 import joblib
 from features_extractor import extract
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'p0owgnY8NC9CEuzRZqc2aamEZesAuCID'.encode('utf8')
 
 
 @app.route('/')
 def home():
-    return render_template('home.html')
+    return render_template('home.html',
+                           mode=session.get('mode'))
+
+
+@app.route('/app')
+def app_route():
+    return render_template('app.html',
+                           mode=session.get('mode'))
 
 
 @app.route('/result', methods=['post'])
@@ -38,6 +46,7 @@ def result():
     for i in range(len(features_labeled)):
         features_labeled[i] = [features_labeled[i], features[i]]
     return render_template('result.html',
+                           mode=session.get('mode'),
                            classification_string=classification_string,
                            features=features_labeled)
 
@@ -50,3 +59,21 @@ def get_class_and_features():
     features.insert(0, prediction)
     features = [str(i) for i in features]
     return "\n".join(features)
+
+
+@app.route('/attribution')
+def attribution():
+    return render_template('attribution.html',
+                           mode=session.get('mode'))
+
+
+@app.route('/dark-mode')
+def dark_mode():
+    session['mode'] = 'dark'
+    return ('', 200)
+
+
+@app.route('/light-mode')
+def light_mode():
+    session['mode'] = 'light'
+    return ('', 200)

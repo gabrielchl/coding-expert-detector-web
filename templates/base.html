@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+
+    <title>Coding Expert Detector</title>
+</head>
+
+<body class="{{ mode }}">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{{ url_for('home') }}">Coding Expert Detector</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="{{ url_for('app_route') }}">App</a>
+                    <a class="nav-link" href="{{ url_for('attribution') }}">Attribution</a>
+                    <a class="nav-link" href="#" id="dark-mode" {% if mode == 'dark' %} style="display: none" {% endif %}>(Dark Mode)</a>
+                    <a class="nav-link" href="#" id="light-mode" {% if mode == 'light' %} style="display: none" {% endif %}>(Light Mode)</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="content mb-5">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+    <script>
+        function darkMode() {
+            $('#dark-mode').hide();
+            $('#light-mode').show();
+            $('body').addClass('dark');
+            $.get('/dark-mode');
+        }
+
+        function lightMode() {
+            $('#light-mode').hide();
+            $('#dark-mode').show();
+            $('body').removeClass('dark');
+            $.get('/light-mode');
+        }
+
+        $('#dark-mode').click(function() {
+            darkMode();
+        });
+
+        $('#light-mode').click(function() {
+            lightMode();
+        });
+    </script>
+
+    {% block scripts %}{% endblock %}
+</body>
+
+</html>

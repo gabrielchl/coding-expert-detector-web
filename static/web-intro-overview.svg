@@ -1,24 +1,19 @@
-{% extends "base.html" %}
-{% block content %}
-<h1 class="fs-3 mt-4 mb-3">Coding Expert Detector</h1>
-<p class="fs-6 mb-3"><b>TL;DR: This is a tool to see if you code like an expert do. Solve the question below and you'll get the results.</b> This website uses a model trained using machine learning to determine if your code is more similar to
-    experts' or novices'.</p>
-<a href="/app">[Try It Out]</a>
-<h2 class="fs-3 mt-5">How does it work</h2>
-<p class="fs-6 mb-0">Step 1) A bunch of code from known novice and expert developers was collected</p>
-<p class="fs-6 mb-0">Step 2) A machine learning model was trained to look at the code and tell the author's experience</p>
-<p class="fs-6">Step 3) This site was created with the model that takes your code as input and predicts your experience</p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="125.97604mm"
    height="123.761mm"
    viewBox="0 0 125.97604 123.761"
    version="1.1"
-   id="svg8">
+   id="svg8"
+   sodipodi:docname="web-intro-overview.svg"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)">
   <defs
      id="defs2">
     <rect
@@ -27,7 +22,43 @@
        width="258.2825"
        height="71.301872"
        id="rect1179" />
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="2.0854784 : 44.823934 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="299.08545 : 44.823934 : 1"
+       inkscape:persp3d-origin="150.58546 : 9.8239296 : 1"
+       id="perspective3059" />
   </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="53.224428"
+     inkscape:cy="297.79031"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:snap-object-midpoints="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="983"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:snap-others="true"
+     inkscape:snap-nodes="true"
+     fit-margin-top="5"
+     fit-margin-left="5"
+     fit-margin-right="5"
+     fit-margin-bottom="5"
+     lock-margins="true" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -41,6 +72,8 @@
     </rdf:RDF>
   </metadata>
   <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
      id="layer1"
      transform="translate(-96.862613,-39.790601)">
     <g
@@ -54,7 +87,8 @@
       <path
          id="rect854-6"
          style="opacity:0.696;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 129.91399,19.303693 h -4.01506 v -4.01506" />
+         d="m 129.91399,19.303693 h -4.01506 v -4.01506"
+         sodipodi:nodetypes="ccc" />
       <g
          id="g934-2"
          transform="matrix(1.4185849,0,0,1.4185849,-52.087604,-9.5336263)"
@@ -90,7 +124,8 @@
         <path
            id="rect854"
            style="opacity:0.696;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           d="m 129.91399,19.303693 h -4.01506 v -4.01506" />
+           d="m 129.91399,19.303693 h -4.01506 v -4.01506"
+           sodipodi:nodetypes="ccc" />
         <g
            id="g934"
            transform="matrix(1.4185849,0,0,1.4185849,-52.087604,-9.5336263)"
@@ -124,7 +159,8 @@
         <path
            id="path1019"
            style="opacity:0.696;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           d="m 129.91399,19.303693 h -4.01506 v -4.01506" />
+           d="m 129.91399,19.303693 h -4.01506 v -4.01506"
+           sodipodi:nodetypes="ccc" />
         <g
            id="g1029"
            transform="matrix(1.4185849,0,0,1.4185849,-52.087604,-9.5336263)"
@@ -158,7 +194,8 @@
         <path
            id="path1035"
            style="opacity:0.696;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           d="m 129.91399,19.303693 h -4.01506 v -4.01506" />
+           d="m 129.91399,19.303693 h -4.01506 v -4.01506"
+           sodipodi:nodetypes="ccc" />
         <g
            id="g1045"
            transform="matrix(1.4185849,0,0,1.4185849,-52.087604,-9.5336263)"
@@ -192,7 +229,8 @@
         <path
            id="path1051"
            style="opacity:0.696;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           d="m 129.91399,19.303693 h -4.01506 v -4.01506" />
+           d="m 129.91399,19.303693 h -4.01506 v -4.01506"
+           sodipodi:nodetypes="ccc" />
         <g
            id="g1061"
            transform="matrix(1.4185849,0,0,1.4185849,-52.087604,-9.5336263)"
@@ -226,7 +264,8 @@
         <path
            id="path1115"
            style="opacity:0.696;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           d="m 129.91399,19.303693 h -4.01506 v -4.01506" />
+           d="m 129.91399,19.303693 h -4.01506 v -4.01506"
+           sodipodi:nodetypes="ccc" />
         <g
            id="g1125"
            transform="matrix(1.4185849,0,0,1.4185849,-52.087604,-9.5336263)"
@@ -260,7 +299,8 @@
         <path
            id="path1131"
            style="opacity:0.696;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           d="m 129.91399,19.303693 h -4.01506 v -4.01506" />
+           d="m 129.91399,19.303693 h -4.01506 v -4.01506"
+           sodipodi:nodetypes="ccc" />
         <g
            id="g1141"
            transform="matrix(1.4185849,0,0,1.4185849,-52.087604,-9.5336263)"
@@ -297,7 +337,8 @@
         <path
            id="rect854-2"
            style="opacity:0.696;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           d="m 129.91399,19.303693 h -4.01506 v -4.01506" />
+           d="m 129.91399,19.303693 h -4.01506 v -4.01506"
+           sodipodi:nodetypes="ccc" />
         <g
            id="g934-0"
            transform="matrix(1.4185849,0,0,1.4185849,-52.087604,-9.5336263)"
@@ -331,7 +372,8 @@
         <path
            id="path1019-2"
            style="opacity:0.696;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           d="m 129.91399,19.303693 h -4.01506 v -4.01506" />
+           d="m 129.91399,19.303693 h -4.01506 v -4.01506"
+           sodipodi:nodetypes="ccc" />
         <g
            id="g1029-8"
            transform="matrix(1.4185849,0,0,1.4185849,-52.087604,-9.5336263)"
@@ -365,7 +407,8 @@
         <path
            id="path1035-9"
            style="opacity:0.696;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           d="m 129.91399,19.303693 h -4.01506 v -4.01506" />
+           d="m 129.91399,19.303693 h -4.01506 v -4.01506"
+           sodipodi:nodetypes="ccc" />
         <g
            id="g1045-3"
            transform="matrix(1.4185849,0,0,1.4185849,-52.087604,-9.5336263)"
@@ -399,7 +442,8 @@
         <path
            id="path1051-5"
            style="opacity:0.696;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           d="m 129.91399,19.303693 h -4.01506 v -4.01506" />
+           d="m 129.91399,19.303693 h -4.01506 v -4.01506"
+           sodipodi:nodetypes="ccc" />
         <g
            id="g1061-0"
            transform="matrix(1.4185849,0,0,1.4185849,-52.087604,-9.5336263)"
@@ -433,7 +477,8 @@
         <path
            id="path1115-2"
            style="opacity:0.696;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           d="m 129.91399,19.303693 h -4.01506 v -4.01506" />
+           d="m 129.91399,19.303693 h -4.01506 v -4.01506"
+           sodipodi:nodetypes="ccc" />
         <g
            id="g1125-0"
            transform="matrix(1.4185849,0,0,1.4185849,-52.087604,-9.5336263)"
@@ -467,7 +512,8 @@
         <path
            id="path1131-6"
            style="opacity:0.696;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           d="m 129.91399,19.303693 h -4.01506 v -4.01506" />
+           d="m 129.91399,19.303693 h -4.01506 v -4.01506"
+           sodipodi:nodetypes="ccc" />
         <g
            id="g1141-5"
            transform="matrix(1.4185849,0,0,1.4185849,-52.087604,-9.5336263)"
@@ -581,6 +627,7 @@
        x="121.56387"
        y="70.503304"
        id="text3442"><tspan
+         sodipodi:role="line"
          id="tspan3440"
          x="121.56387"
          y="70.503304"
@@ -591,6 +638,7 @@
        x="165.36591"
        y="70.159653"
        id="text3442-9"><tspan
+         sodipodi:role="line"
          id="tspan3440-7"
          x="165.36591"
          y="70.159653"
@@ -601,6 +649,7 @@
        x="140.33931"
        y="114.12772"
        id="text3464"><tspan
+         sodipodi:role="line"
          id="tspan3462"
          x="140.33931"
          y="114.12772"
@@ -611,6 +660,7 @@
        x="151.92517"
        y="158.48012"
        id="text3468"><tspan
+         sodipodi:role="line"
          id="tspan3466"
          x="151.92517"
          y="158.48012"
@@ -621,6 +671,7 @@
        x="101.75754"
        y="158.48012"
        id="text3472"><tspan
+         sodipodi:role="line"
          id="tspan3470"
          x="101.75754"
          y="158.48012"
@@ -631,6 +682,7 @@
        x="188.50537"
        y="158.51715"
        id="text3476"><tspan
+         sodipodi:role="line"
          id="tspan3474"
          x="188.50537"
          y="158.51715"
@@ -724,8 +776,3 @@
      type="text/css"
      id="style3225">.st0{fill-rule:evenodd;clip-rule:evenodd;}</style>
 </svg>
-
-<p class="fs-7">Figure 1. Illustration of the creation and usage of the machine learning model.</p>
-<h2 class="fs-3 mt-5">Who made this? And why?</h2>
-<p class="fs-6">Made by Gabriel Lee (<a href="https://github.com/gabrielchl/">gabrielchl</a>), under the project supervisior, <a href="https://www.lancaster.ac.uk/scc/about-us/people/tracy-hall">Tracy Hall</a>. This is made part of my 20 weeks long BSc Computer Science degree project, titled <i>An Attempt to Use Machine Learning to Classify Novice and Expert Developers</i>, a report for the entire project can be found <a href="">here</a>.</p>
-{% endblock %}
