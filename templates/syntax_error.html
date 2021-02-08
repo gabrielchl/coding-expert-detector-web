@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="fs-3 mt-4 mb-3">Syntax Error</h2>
+<p>Error description: {{ error.description }}{% if error.at %}<br>Error location: {{ error.at }}{% endif %}</p>
+<a href="{{ url_for('app_route') }}">[Back]</a>
+{% endblock %}

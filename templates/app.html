@@ -14,16 +14,19 @@
 <p><b>Complete the given method, permutationEquation, in Java</b> below such that it would take the array p as input and return the array y.</p>
 
 <h2 class="fs-3 mt-4 mb-3">Step 2. Download the following files and complete the task</h2>
+<p><a href="{{ url_for('static', filename='Solution.java') }}">[Download Solution.java]</a><br><a href="{{ url_for('static', filename='Test.java') }}">[Download Test.java]</a></p>
+<p>Complete Solution.java and upload it below. Do not change the name of the class and the default function declaration. You could add your own helper functions though.</p>
+<p>It is suggested to test that you code works before submitting, just compile and run Test.java to do so.</p>
 
 <h2 class="fs-3 mt-4 mb-3">Step 3. Upload your solution</h2>
 <input type="file" name="upload" id="upload" class="mb-3">
 
 <div id="editor" class="mb-3"></div>
 
-<h2 class="fs-3 mt-4 mb-3">Step 4. Submit</h2>
+<h2 class="fs-3 mt-4 mb-3">Step 4. <a href="#" id="submitBtn">[Submit]</a></h2>
+
 <form id="codeForm" action="/result" method="post">
     <input type="hidden" name="code" id="code">
-    <button type="submit" id="submitBtn" class="btn btn-link ml-0 pl-0">[Submit]</button>
 </form>
 {% endblock %}
 {% block scripts %}
@@ -49,23 +52,30 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/theme/seti.min.css" integrity="sha512-A7KLVdYbXryV98af9mTrVoUPuUuq94hkMjPgzHnrfi6QZbq9ylrgbRKp31/DQ8qareLzA3e56/VmIrrQlaDAqw==" crossorigin="anonymous" />
 <script>
     var codeMirror = CodeMirror(document.getElementById("editor"), {
-        value: "static int[] permutationEquation(int[] p) {\n    // Write your code here, do not modify the method declaration\n}\n",
         lineNumbers: true,
         theme: "seti",
+        readOnly: true
     });
     codeMirror.setSize(null, 400);
 
     var fileSelector = document.getElementById("upload");
     var reader = new FileReader();
+    var code;
     reader.addEventListener('load', (event) => {
-        codeMirror.getDoc().setValue(event.target.result);
+        code = event.target.result;
+        codeMirror.getDoc().setValue(code);
     });
     fileSelector.addEventListener('change', (event) => {
         reader.readAsText(event.target.files[0]);
     });
 
-    $('#codeForm').submit(function() {
-        $('#code').val(codeMirror.getDoc().getValue());
+    $('#submitBtn').click(function() {
+        if (code == undefined) {
+            alert("Select a file before submit.");
+        } else {
+            $('#code').val(code);
+            $('#codeForm').submit();
+        }
     });
 </script>
 {% endblock %}

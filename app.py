@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, session
+from javalang.parser import JavaSyntaxError
 import joblib
 from features_extractor import extract
 
@@ -21,7 +22,12 @@ def app_route():
 @app.route('/result', methods=['post'])
 def result():
     model = joblib.load('model.sav')
-    features = extract(request.form['code'])
+    try:
+        features = extract(request.form['code'])
+    except JavaSyntaxError as e:
+        return render_template('syntax_error.html',
+                               mode=session.get('mode'),
+                               error=e)
     prediction = model.predict([features])[0]
     if prediction:
         classification_string = 'expert'
@@ -44,7 +50,7 @@ def result():
         'Number of spaces (excluding those for indentation)'
     ]
     for i in range(len(features_labeled)):
-        features_labeled[i] = [features_labeled[i], features[i]]
+        features_labeled[i] = [features_labeled[i], str(features[i])[:8]]
     return render_template('result.html',
                            mode=session.get('mode'),
                            classification_string=classification_string,
@@ -57,7 +63,7 @@ def get_class_and_features():
     features = extract(request.form['code'])
     prediction = model.predict([features])[0]
     features.insert(0, prediction)
-    features = [str(i) for i in features]
+    features = [str(i)[:8] for i in features]
     return "\n".join(features)
 
 
