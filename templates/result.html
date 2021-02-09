@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-<h4 class="mt-5">You seem to be a:</h4>
+<h4 class="mt-5">You seem to be a{% if classification_string == 'expert' %}n{% endif %}:</h4>
 <h1 class="mb-5">{{ classification_string|upper }}</h1>
 <style>
     .table {

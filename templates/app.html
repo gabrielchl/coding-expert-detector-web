@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 <h2 class="fs-3 mt-4 mb-3">Step 1. Read the following question</h2>
-<p>Given a sequence of $n$ integers, $p(1), p(2), ..., p(n)$ where each element is distinct and satisfies $1 \le p(x) \le n$. For each $x$ where $1 \le x \le n$, find any integer $y$ such that $p(p(y)) \equiv x$ and print the value of $y$ on a new line.</p>
+<p>Given a sequence of $n$ integers, $p(1), p(2), ..., p(n)$ where each element is distinct and satisfies $1 \le p(x) \le n$. For each $x$ where $1 \le x \le n$, find any integer $y$ such that $p(p(y)) \equiv x$ and return all $y$ values in an array.</p>
 <p>For example, assume the sequence $p = [5,2,1,3,4]$. Each value of $x$ between $1$ and $5$, the length of the sequence, is analyzed as follows:</p>
 <ol>
     <li>$x = 1$, $p[3] = 1$ and $p[4] = 3$, so $p[p[4]] = 1$</li>
